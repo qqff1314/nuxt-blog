@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 module.exports = {
   /*
   ** Headers of the page
@@ -42,6 +43,6 @@ module.exports = {
   ],
   css: [
     '~assets/css/main.css',
-    '~assets/css/quill.snow.css'
+    '~assets/css/quill.snow.css',
   ]
 }
