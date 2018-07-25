@@ -1,8 +1,14 @@
 <template>
     <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect">
-      <el-menu-item index="index">首页</el-menu-item>
-      <el-menu-item index="message">留言</el-menu-item>
-      <el-menu-item index="about">关于我们</el-menu-item>
+      <el-menu-item index="index">
+        <nuxt-link :to="{path:'/'}">首页</nuxt-link>
+      </el-menu-item>
+      <el-menu-item index="message">
+        <nuxt-link :to="{path:'/message'}">留言</nuxt-link>
+      </el-menu-item>
+      <el-menu-item index="about">
+        <nuxt-link :to="{path:'/about'}">关于我们</nuxt-link>
+       </el-menu-item>
     </el-menu>
 </template>
 <script>

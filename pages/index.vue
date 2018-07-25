@@ -7,12 +7,12 @@
     </div>
     <el-row :gutter="40">
       <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="6" v-for="(i,index) in articleList" :key="index">
-        <nuxt-link :to="{name:'detail',query:{ id: i.Id }}" class="item">
+        <div class="item">
           <div class="img-box">
             <div class="img" :style="{backgroundImage:'url('+(i.Img||'/favicon.ico')+')'}"></div>
           </div>
-          <p class="tit">{{i.Title}}</p>
-        </nuxt-link>
+          <h1><nuxt-link class="tit" :to="{name:'detail',query:{ id: i.Id }}">{{i.Title}}</nuxt-link></h1>
+        </div>
       </el-col>
     </el-row>
     <el-pagination
@@ -104,7 +104,6 @@ export default {
 }
 </script>
 <style >
-
   .slider{
     position: fixed;
     width: 150px;
@@ -183,14 +182,13 @@ export default {
   .index .item{
     display: block;
     border-radius: 5px;
-    cursor: pointer;
     background: #fff;
     box-shadow: 10px 0 40px 0 rgba(0,0,0,.1);
     padding: 20px;
     margin-bottom: 20px;
     align-items: center;
   }
-  .index .item:hover .img{
+  .index .item .img:hover{
     transform: scale(1.2)
   }
   .index .item .img-box{
@@ -205,10 +203,13 @@ export default {
     -webkit-line-clamp: 2;
     overflow: hidden;
     padding-top: 20px;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 23px;
     word-break: break-all;
-    color: #313131;
+    color: #333;
+    cursor: pointer;
+    transition: .3s all;
+    font-weight: normal;
   }
   .index .item .img{
     transition: .3s all;
