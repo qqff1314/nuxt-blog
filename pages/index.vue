@@ -1,12 +1,18 @@
 <template>
   <div class="index">
     <div class="slider hidden-xs-only" v-if="list.length">
-      <ul>
-        <li :class="articleClassId===item.ClassId?'active':''" v-for="(item,index) in list" :key="index" @click="classSearch(item.ClassId)">{{item.ClassName}}{{item.ClassArticleNum&&'('+item.ClassArticleNum+')'}}</li>
-      </ul>
+      <div class="slider-img">
+        <img src="~assets/img/logo.png" width="150px" height="82px" alt="没下雨" title="没下雨">
+        <img src="~assets/img/logo-text.png" width="80px"  height="60px" alt="没下雨" title="没下雨">
+      </div>
+      <div class="slider-class">
+        <ul>
+          <li :class="articleClassId===item.ClassId?'active':''" v-for="(item,index) in list" :key="index" @click="classSearch(item.ClassId)">{{item.ClassName}}{{item.ClassArticleNum&&'('+item.ClassArticleNum+')'}}</li>
+        </ul>
+      </div>
     </div>
     <el-row :gutter="40">
-      <el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="6" v-for="(i,index) in articleList" :key="index">
+      <el-col :xs="24" :sm="12" :md="8" :lg="8" :xl="6" v-for="(i,index) in articleList" :key="index">
         <div class="item">
           <div class="img-box">
             <div class="img" :style="{backgroundImage:'url('+(i.Img||'/favicon.ico')+')'}"></div>
@@ -106,56 +112,65 @@ export default {
 <style >
   .slider{
     position: fixed;
-    width: 150px;
+    width: 300px;
     top: 0;
     left: 0;
     bottom: 0;
     background: #fafafa;
     z-index: 10;
     transition: 1s all;
+    box-shadow: 0 10px 20px 5px #dedede;
+  }
+  .slider .slider-img{
+    width: 100%;
+    margin: 30px 0;
+  }
+  .slider .slider-img img{
+    display: block;
+    margin: 0 auto;
+  }
+  .slider .slider-class{
+    position: absolute;
+    top: 220px;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    box-shadow: 0 10px 20px 5px #dedede;
+  }
+  .slider:before{
+    position: absolute;
+    content: '';
+    top: 220px;
+    width: 200px;
+    left: 50px;
+    height: 1px;
+    background: #eee;
+  }
+  .slider:after{
+    position: absolute;
+    content: '';
+    bottom: 50px;
+    width: 200px;
+    left: 50px;
+    height: 1px;
+    background: #eee;
   }
   .slider li{
-    margin-bottom: 10px;
-    padding: 20px 20px;
+    text-align: center;
+    padding: 20px;
     line-height: 20px;
     font-size: 14px;
     cursor: pointer;
     position: relative;
-    color: #999;
+    color: #666;
     transition: .3s all;
     word-break: break-all;
   }
-  .slider li:before{
-    transition: .3s all;
-    content: '';
-    width: 0;
-    height: 2px;
-    border-radius: 2px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: rgb(59, 128, 112);
-  }
   .slider li.active{
-    color: rgb(59, 128, 112);
     font-weight: bold;
-  }
-  .slider li:hover{
-    color: rgb(59, 128, 112);
-  }
-  .slider li.active:before{
-    content: '';
-    width: 80px;
-    height: 2px;
-    border-radius: 2px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: rgb(59, 128, 112);
+    color: #333;
   }
   .slider-xs ul{
      display: flex;
@@ -184,25 +199,25 @@ export default {
     border-radius: 5px;
     background: #fff;
     box-shadow: 10px 0 40px 0 rgba(0,0,0,.1);
-    padding: 20px;
     margin-bottom: 20px;
     align-items: center;
+    padding-bottom: 20px;
   }
   .index .item .img:hover{
     transform: scale(1.2)
   }
   .index .item .img-box{
     width: 100%;
-    height: 150px;
+    height: 200px;
     overflow: hidden;
   }
   .index .item .tit{
-    height: 66px;
+    height: 46px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-    padding-top: 20px;
+    margin: 20px 20px 0;
     font-size: 16px;
     line-height: 23px;
     word-break: break-all;
@@ -238,7 +253,7 @@ export default {
   }
   @media  screen and (min-width: 768px) and (max-width: 1200px) {
     .index {
-      padding: 40px 50px
+      padding: 40px 20px
     }
   }
 </style>

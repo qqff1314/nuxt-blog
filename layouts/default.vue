@@ -3,16 +3,13 @@
     <canvas id="canvas"></canvas>
     <el-header><Header/></el-header>
     <main><nuxt/></main>
-    <Footer/>
   </el-container>
 </template>
 <script>
 import Header from '~/components/Header.vue'
-import Footer from '~/components/Footer.vue'
 export default {
   components: {
     Header,
-    Footer
   },
   data(){
     return {
@@ -44,7 +41,7 @@ export default {
       context.fillStyle = "rgba(0, 0, 0, 0.08)";
       context.strokeStyle = "rgba(0, 0, 0, 0.05)";
       context.lineWidth = 0.5;
-      let num = this.isMobile?10:30;
+      let num = this.isMobile?10:20;
       let t=this;
       for(let i = 0; i < num; i++) {
           t.createBall();
@@ -111,7 +108,7 @@ export default {
       if(val.name!=='index'){
         this.paddingLeft=0
       }else{
-        this.paddingLeft=150
+        this.paddingLeft=300
       }
     }
   }

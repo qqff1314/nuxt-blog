@@ -5,7 +5,7 @@
         <p class="detail-tit">{{detail.Title}}</p>
         <div class="detail-head">
           <time :datetime="detail.Time" itemprop="datePublished">发布于 {{detail.Time}}</time>
-          / <a href="/category/SOFA">{{detail.ClassName}}</a> / {{detail.ReadNum}}浏览
+          / <a>{{detail.ClassName}}</a> / {{detail.ReadNum}}浏览
           {{detail.Link?'/原文地址：'+detail.Link:''}}
         </div>
         <article v-html="detail.Detail" class="ql-editor" v-highlight></article>

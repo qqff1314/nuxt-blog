@@ -1,4 +1,5 @@
 <template>
+  <div class="nav">
     <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect">
       <el-menu-item index="index">
         <nuxt-link :to="{path:'/'}">首页</nuxt-link>
@@ -6,10 +7,10 @@
       <el-menu-item index="message">
         <nuxt-link :to="{path:'/message'}">留言</nuxt-link>
       </el-menu-item>
-      <el-menu-item index="about">
-        <nuxt-link :to="{path:'/about'}">关于我们</nuxt-link>
-       </el-menu-item>
     </el-menu>
+    <img class="hidden-sm-and-up" src="~assets/img/logo-text.png"  alt="没下雨" title="没下雨">
+  </div>
+
 </template>
 <script>
   export default {
@@ -30,5 +31,9 @@
     }
   }
 </script>
-<style>
+<style scoped>
+  .nav{
+    display: flex;
+    justify-content: space-between;
+  }
 </style>
