@@ -121,7 +121,6 @@
    .message .comment {
     text-align: center;
     padding: 19px 0;
-    background-color: #eaeaea;
     color: #3d3d3d;
     width: 60%;
     margin: 0 auto;
