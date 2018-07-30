@@ -118,7 +118,7 @@ export default {
   main{
     padding: 20px;
     flex: 1;
-    background-image: url("../assets/img/ico-2.png");
+    background-image: url("../assets/img/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

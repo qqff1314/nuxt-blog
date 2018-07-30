@@ -175,6 +175,7 @@ export default {
   .slider-xs ul{
      display: flex;
   }
+
   .slider-xs ul li{
     margin: 0 10px 10px 0;
     padding: 5px 10px;

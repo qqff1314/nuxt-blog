@@ -119,6 +119,7 @@
 </script>
 <style>
    .message .comment {
+
     text-align: center;
     padding: 19px 0;
     color: #3d3d3d;
