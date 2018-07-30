@@ -168,7 +168,7 @@ export default {
     transition: .3s all;
     word-break: break-all;
   }
-  .slider li.active{
+  .slider li.active,.slider li:hover{
     font-weight: bold;
     color: #333;
   }
