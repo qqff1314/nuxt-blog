@@ -164,12 +164,11 @@ export default {
     font-size: 14px;
     cursor: pointer;
     position: relative;
-    color: #666;
+    color: #909399;
     transition: .3s all;
     word-break: break-all;
   }
   .slider li.active,.slider li:hover{
-    font-weight: bold;
     color: #333;
   }
   .slider-xs ul{
@@ -224,7 +223,6 @@ export default {
     word-break: break-all;
     color: #333;
     cursor: pointer;
-    transition: .3s all;
     font-weight: normal;
   }
   .index .item .img{
@@ -232,10 +230,13 @@ export default {
     width: 100%;
     height: 100%;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     display: block;
     margin: 0 auto;
+  }
+  .index .item .tit:hover{
+    text-decoration:underline
   }
   @media  screen and (min-width: 1920px) {
     .index {

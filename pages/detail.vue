@@ -5,8 +5,7 @@
         <p class="detail-tit">{{detail.Title}}</p>
         <div class="detail-head">
           <time :datetime="detail.Time" itemprop="datePublished">发布于 {{detail.Time}}</time>
-          / <a>{{detail.ClassName}}</a> / {{detail.ReadNum}}浏览
-          {{detail.Link?'/原文地址：'+detail.Link:''}}
+          / <a>{{detail.ClassName}}</a> / <span style="color: orange">{{detail.ReadNum}}</span>浏览 <a v-if="detail.Url" :href="detail.Url" >/ <span style="color: green">原文地址</span></a>
         </div>
         <article v-html="detail.Detail" class="ql-editor" v-highlight></article>
         <div class="comment">
@@ -233,7 +232,6 @@
   .detail .comment {
     text-align: center;
     padding: 19px 0;
-    background-color: #eaeaea;
     color: #3d3d3d;
     margin: 100px 0 10px;
     border-radius: 5px;
