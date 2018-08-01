@@ -2,7 +2,7 @@ export const state = () => ({
     articleList: [],
     articlePage: 1,
     articleTotal: 0,
-    articleLimit: 18,
+    articleLimit: 24,
     articleClassId:''
   });
 

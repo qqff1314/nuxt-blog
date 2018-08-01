@@ -69,7 +69,9 @@ export default {
     }
   },
   mounted(){
-    this.init();
+    if(this.articleList.length!==0){
+      this.init();
+    }
   },
   methods:{
     init(){
@@ -95,7 +97,6 @@ export default {
           ClassId:article.articleClassId
         },
       });
-
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
       this.$store.commit('article/setArticleList', data.list);
