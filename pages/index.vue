@@ -46,10 +46,12 @@ export default {
   async asyncData ({ store }) {
     const article = store.state.article;
     if (article.articleList.length === 0) {
-      const {data} = await Axios.axios.get('article/list', {
+      const {data} = await Axios.axios.get('article/listSearch', {
         params: {
           Page:article.articlePage,
           Limit: article.articleLimit,
+          KeyWord:'',
+          ClassId:article.articleClassId
         },
       });
       store.commit('article/setArticleList', data.list);
