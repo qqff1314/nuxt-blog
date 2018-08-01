@@ -38,7 +38,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import Axios from '~/plugins/axios'
 import { mapState } from 'vuex'
@@ -109,7 +108,7 @@ export default {
   },
 }
 </script>
-<style >
+<style>
   .slider{
     position: fixed;
     width: 300px;
@@ -174,7 +173,6 @@ export default {
   .slider-xs ul{
      display: flex;
   }
-
   .slider-xs ul li{
     margin: 0 10px 10px 0;
     padding: 5px 10px;

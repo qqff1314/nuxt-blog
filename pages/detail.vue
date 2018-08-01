@@ -50,6 +50,7 @@
       :close-on-click-modal="false"
       :before-close="clear"
       :lock-scroll="false"
+      width="30%"
       :visible.sync="dialogVisible">
       <el-input v-model.trim="name" placeholder="请输入昵称" maxlength="6"></el-input>
       <el-input

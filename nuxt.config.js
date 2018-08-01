@@ -44,8 +44,8 @@ module.exports = {
     }
   },
   plugins: [
-    { src: '~plugins/axios', ssr: true },
-    { src: '~plugins/element-ui',  ssr: true}
+    { src: '~plugins/axios'},
+    { src: '~plugins/element-ui'}
   ],
   css: [
     '~assets/css/main.css',

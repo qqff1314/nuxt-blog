@@ -100,8 +100,10 @@ a:visited {
   max-width: 1200px;
   margin: 0 auto;
 }
-.el-container .el-dialog{
-  width: 305px;
+@media  screen and (max-width: 768px){
+  .el-container .el-dialog{
+    width: 305px!important;
+  }
 }
 .el-container .el-header{
   background-color: #fff;

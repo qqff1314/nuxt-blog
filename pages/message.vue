@@ -9,6 +9,7 @@
       :close-on-click-modal="false"
       :before-close="clear"
       :lock-scroll="false"
+      width="30%"
       :visible.sync="dialogVisible">
       <el-input
         type="textarea"
