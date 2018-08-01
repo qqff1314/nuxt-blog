@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c3a2e77-6051-4b8a-909f-32143a45629e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" afterPath="$PROJECT_DIR$/pages/index.vue" />
-      <change beforePath="$PROJECT_DIR$/store/article.js" afterPath="$PROJECT_DIR$/store/article.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,24 +17,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="axios.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/axios.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            <state relative-caret-position="165">
+              <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
               <folding>
                 <element signature="n#el-pagination#0;n#div#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="e#3746#3937#0" expanded="false" />
-                <element signature="e#3959#4001#0" expanded="false" />
-                <element signature="e#4027#4072#0" expanded="false" />
-                <element signature="e#4096#4274#0" expanded="false" />
-                <element signature="e#4291#4426#0" expanded="false" />
-                <element signature="e#4442#4579#0" expanded="false" />
-                <element signature="e#4592#4801#0" expanded="false" />
-                <element signature="e#4838#4860#0" expanded="false" />
-                <element signature="e#4876#4901#0" expanded="false" />
+                <element signature="e#3701#3892#0" expanded="false" />
+                <element signature="e#3914#3956#0" expanded="false" />
+                <element signature="e#3982#4027#0" expanded="false" />
+                <element signature="e#4051#4229#0" expanded="false" />
+                <element signature="e#4246#4381#0" expanded="false" />
+                <element signature="e#4397#4534#0" expanded="false" />
+                <element signature="e#4547#4756#0" expanded="false" />
+                <element signature="e#4793#4815#0" expanded="false" />
+                <element signature="e#4831#4856#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store/article.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -269,12 +289,12 @@
       <workItem from="1533003447885" duration="5989000" />
       <workItem from="1533016863304" duration="6780000" />
       <workItem from="1533087980761" duration="3995000" />
-      <workItem from="1533103133677" duration="4989000" />
+      <workItem from="1533103133677" duration="5295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155687000" />
+    <option name="totallyTimeSpent" value="155993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -585,38 +605,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/axios.js">
+    <entry file="file://$PROJECT_DIR$/store/article.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        <state relative-caret-position="336">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store/article.js">
+    <entry file="file://$PROJECT_DIR$/plugins/axios.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="546">
+          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
           <folding>
             <element signature="n#el-pagination#0;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#3746#3937#0" expanded="false" />
-            <element signature="e#3959#4001#0" expanded="false" />
-            <element signature="e#4027#4072#0" expanded="false" />
-            <element signature="e#4096#4274#0" expanded="false" />
-            <element signature="e#4291#4426#0" expanded="false" />
-            <element signature="e#4442#4579#0" expanded="false" />
-            <element signature="e#4592#4801#0" expanded="false" />
-            <element signature="e#4838#4860#0" expanded="false" />
-            <element signature="e#4876#4901#0" expanded="false" />
+            <element signature="e#3701#3892#0" expanded="false" />
+            <element signature="e#3914#3956#0" expanded="false" />
+            <element signature="e#3982#4027#0" expanded="false" />
+            <element signature="e#4051#4229#0" expanded="false" />
+            <element signature="e#4246#4381#0" expanded="false" />
+            <element signature="e#4397#4534#0" expanded="false" />
+            <element signature="e#4547#4756#0" expanded="false" />
+            <element signature="e#4793#4815#0" expanded="false" />
+            <element signature="e#4831#4856#0" expanded="false" />
           </folding>
         </state>
       </provider>

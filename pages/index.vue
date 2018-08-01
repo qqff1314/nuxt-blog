@@ -69,9 +69,7 @@ export default {
     }
   },
   mounted(){
-    if(this.articleList.length!==0){
-      this.init();
-    }
+     this.init();
   },
   methods:{
     init(){
