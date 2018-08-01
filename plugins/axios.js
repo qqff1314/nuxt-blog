@@ -4,8 +4,8 @@ import { Message } from 'element-ui';
 import qs from 'qs';
 
 const Axios = axios.create({
-  // baseURL: 'http://localhost:3001/api',
-  baseURL: 'http://212.64.18.182/api',
+  baseURL: 'http://localhost:3001/api',
+  // baseURL: 'http://212.64.18.182/api',
   timeout: 10000,
   responseType: 'json',
   headers: {
