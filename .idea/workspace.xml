@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c3a2e77-6051-4b8a-909f-32143a45629e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/img/logo.png" afterPath="$PROJECT_DIR$/assets/img/logo.png" />
       <change beforePath="$PROJECT_DIR$/plugins/axios.js" afterPath="$PROJECT_DIR$/plugins/axios.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,8 +19,8 @@
       <file leaf-file-name="axios.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugins/axios.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+            <state relative-caret-position="210">
+              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -285,12 +283,12 @@
       <workItem from="1532919052745" duration="15316000" />
       <workItem from="1533003447885" duration="5989000" />
       <workItem from="1533016863304" duration="6780000" />
-      <workItem from="1533087980761" duration="3255000" />
+      <workItem from="1533087980761" duration="3304000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149958000" />
+    <option name="totallyTimeSpent" value="150007000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -624,8 +622,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/axios.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        <state relative-caret-position="210">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>
