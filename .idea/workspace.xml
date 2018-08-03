@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c3a2e77-6051-4b8a-909f-32143a45629e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/img/emo-active.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/img/emo.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/pages/message.vue" afterPath="$PROJECT_DIR$/pages/message.vue" />
-      <change beforePath="$PROJECT_DIR$/plugins/element-ui.js" afterPath="$PROJECT_DIR$/plugins/element-ui.js" />
+      <change beforePath="$PROJECT_DIR$/plugins/axios.js" afterPath="$PROJECT_DIR$/plugins/axios.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,21 +18,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="axios.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="axios.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/axios.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="84">
+              <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="message.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/message.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="102" column="24" lean-forward="true" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
+            <state relative-caret-position="714">
+              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#el-pagination#0;n#div#0;n#template#0;n#!!top" expanded="false" />
@@ -101,8 +99,8 @@
         <option value="$PROJECT_DIR$/store/article.js" />
         <option value="$PROJECT_DIR$/pages/index.vue" />
         <option value="$PROJECT_DIR$/plugins/element-ui.js" />
-        <option value="$PROJECT_DIR$/pages/message.vue" />
         <option value="$PROJECT_DIR$/plugins/axios.js" />
+        <option value="$PROJECT_DIR$/pages/message.vue" />
       </list>
     </option>
   </component>
@@ -115,8 +113,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="3835" />
-    <option name="y" value="81" />
+    <option name="x" value="3758" />
+    <option name="y" value="12" />
     <option name="width" value="1942" />
     <option name="height" value="1571" />
   </component>
@@ -136,7 +134,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,6 +197,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,12 +279,13 @@
       <workItem from="1533116373698" duration="652000" />
       <workItem from="1533127387015" duration="953000" />
       <workItem from="1533175729329" duration="7000" />
-      <workItem from="1533262554585" duration="2045000" />
+      <workItem from="1533262554585" duration="3042000" />
+      <workItem from="1533289152570" duration="477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162064000" />
+    <option name="totallyTimeSpent" value="163538000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -298,8 +297,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="3835" y="81" width="1942" height="1571" extended-state="0" />
-    <editor active="true" />
+    <frame x="3758" y="12" width="1942" height="1571" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21102864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32772493" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -309,7 +307,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845646" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18653987" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18653987" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -536,22 +534,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/axios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/message.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="102" column="24" lean-forward="true" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
+        <state relative-caret-position="714">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding>
             <element signature="n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#el-pagination#0;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/axios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>

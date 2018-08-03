@@ -2,7 +2,7 @@
   <div class="message w1200">
     <div class="comment">
       想对作者说点什么？
-      <el-button type="success" @click="dialogVisible = true">我来说一句</el-button>
+      <el-button type="success" @click="dialogVisible = true">此处留言</el-button>
     </div>
     <el-dialog
       title="留言"
@@ -22,6 +22,7 @@
           v-model.trim="val">
         </el-input>
         <el-popover
+          v-model="emoType"
           placement="bottom"
           width="300"
           @show="emoType=true"
@@ -103,6 +104,7 @@
       emojiSelect(item){
         if(this.val.length+item.mark.length<=200){
           this.val=this.val.toString()+item.mark;
+          this.emoType=false;
         }
       },
       clear(){
