@@ -11,19 +11,29 @@
       :lock-scroll="false"
       width="30%"
       :visible.sync="dialogVisible">
-      <el-input
-        type="textarea"
-        :rows="5"
-        class="comment-text"
-        resize="none"
-        maxlength="200"
-        placeholder="说点什么吧"
-        v-model.trim="val">
-      </el-input>
-      <div class="emoji">
-        <ul>
-          <li @click="emojiSelect(item)" v-for="(item,index) in emoji" :key="index"><img :src="item.src" alt=""></li>
-        </ul>
+      <div class="comment-box">
+        <el-input
+          type="textarea"
+          :rows="5"
+          class="comment-text"
+          resize="none"
+          maxlength="200"
+          placeholder="说点什么吧"
+          v-model.trim="val">
+        </el-input>
+        <el-popover
+          placement="bottom"
+          width="300"
+          @show="emoType=true"
+          @hide="emoType=false"
+          trigger="click">
+          <div class="emoji">
+            <ul>
+              <li @click="emojiSelect(item)" v-for="(item,index) in emoji" :key="index"><img :src="item.src" alt=""></li>
+            </ul>
+          </div>
+          <div :class="['emoji-btn',{'active':emoType}]" slot="reference"></div>
+        </el-popover>
       </div>
       <span slot="footer" class="dialog-footer">
         <el-button @click="clear">取 消</el-button>
@@ -63,6 +73,7 @@
     }),
     data() {
       return {
+        emoType:false,
         val:'',
         loading:false,
         dialogVisible:false,
@@ -90,7 +101,9 @@
     },
     methods: {
       emojiSelect(item){
-        this.val=this.val.toString()+item.mark;
+        if(this.val.length+item.mark.length<=200){
+          this.val=this.val.toString()+item.mark;
+        }
       },
       clear(){
         [this.dialogVisible,this.val,this.loading]=[false,'',false]
@@ -146,14 +159,33 @@
   }
 </script>
 <style>
-  .emoji{
-    padding-top: 30px;
-    cursor: pointer;
-  }
+
   .emoji ul{
     flex-wrap: wrap;
     display: flex;
+    cursor: pointer;
     justify-content: start;
+  }
+  .emoji-btn{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    transition: .3s all;
+    background: url("../assets/img/emo.png") no-repeat center;
+    background-size: 20px;
+  }
+  .emoji-btn.active{
+    background: url("../assets/img/emo-active.png") no-repeat center;
+    background-size: 20px;
+  }
+  .comment-box .el-textarea__inner{
+    padding-bottom: 40px;
+  }
+  .comment-box{
+    position: relative;
   }
    .message .comment {
     text-align: center;
