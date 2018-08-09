@@ -38,11 +38,7 @@ export default {
   main{
     padding: 20px;
     flex: 1;
-    background-image: url("../assets/img/bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: #F6FAFB;
   }
   @media  screen and (max-width: 768px){
     .el-container.is-vertical{

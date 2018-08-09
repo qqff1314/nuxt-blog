@@ -3,7 +3,7 @@
     <div class="slider hidden-xs-only" v-if="list.length">
       <div class="slider-img">
         <img src="~assets/img/logo.png" width="150px" height="82px" alt="没下雨" title="没下雨">
-        <img src="~assets/img/logo-text.png" width="80px"  height="60px" alt="没下雨" title="没下雨">
+        <img src="~assets/img/logo-text.png" width="80px"  height="27px" alt="没下雨" title="没下雨">
       </div>
       <div class="slider-class">
         <ul>
@@ -120,6 +120,10 @@ export default {
     z-index: 10;
     transition: 1s all;
     box-shadow: 0 10px 20px 5px #dedede;
+    background-image: url("../assets/img/slider-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .slider .slider-img{
     width: 100%;
@@ -127,7 +131,7 @@ export default {
   }
   .slider .slider-img img{
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 20px;
   }
   .slider .slider-class{
     position: absolute;
@@ -138,24 +142,6 @@ export default {
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-  }
-  .slider:before{
-    position: absolute;
-    content: '';
-    top: 220px;
-    width: 200px;
-    left: 50px;
-    height: 1px;
-    background: #eee;
-  }
-  .slider:after{
-    position: absolute;
-    content: '';
-    bottom: 50px;
-    width: 200px;
-    left: 50px;
-    height: 1px;
-    background: #eee;
   }
   .slider li{
     text-align: center;
