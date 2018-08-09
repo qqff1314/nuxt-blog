@@ -6,7 +6,7 @@ import qs from 'qs';
 const Axios = axios.create({
   // baseURL: 'http://localhost:3001/api',
   // baseURL: 'http://212.64.18.182/api',
-  baseURL: 'http://www.mxxxy.cn/api',
+  baseURL: 'http://localhost/api',
   timeout: 10000,
   responseType: 'json',
   headers: {
