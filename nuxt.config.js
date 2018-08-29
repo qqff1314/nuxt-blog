@@ -50,5 +50,6 @@ module.exports = {
   css: [
     '~assets/css/main.css',
     '~assets/css/quill.snow.css',
+    '~assets/css/quill.bubble.css',
   ]
 }

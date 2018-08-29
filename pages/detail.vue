@@ -72,7 +72,7 @@
 <script>
   import Axios from '~/plugins/axios'
   import hljs from 'highlight.js'
-  import 'highlight.js/styles/github.css' //样式文件
+  import 'highlight.js/styles/solarized-light.css' //样式文件
   export default {
     async asyncData({query}) {
       const {data} = await Axios.axios.get('article/detail', {
