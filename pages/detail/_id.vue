@@ -115,7 +115,7 @@
     methods: {
       init(){
         let t=this;
-        document.querySelector('article img').onclick=(e)=>{
+        document.querySelectorAll('article img').onclick=(e)=>{
           window.open(e.target.src)
         }//图片点击
         Axios.axios.get('commit/list', {
