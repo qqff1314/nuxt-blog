@@ -115,9 +115,12 @@
     methods: {
       init(){
         let t=this;
-        document.querySelectorAll('article img').onclick=(e)=>{
-          window.open(e.target.src)
-        }//图片点击
+        let btn=document.querySelectorAll('article img');//图片点击
+        for (var i = 0; i < btn.length; i++) {
+          btn[i].onclick=function(e){
+              window.open(e.target.src)
+          }
+        }
         Axios.axios.get('commit/list', {
           params:{
             ArticleId:t.$route.params.id,
