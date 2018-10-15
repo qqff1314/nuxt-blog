@@ -7,7 +7,9 @@
           <time :datetime="detail.Time" itemprop="datePublished">发布于 {{detail.Time}}</time>
           / <a>{{detail.ClassName}}</a> / <span style="color: orange">{{detail.ReadNum}}</span>浏览 <a v-if="detail.Url" :href="detail.Url" >/ <span style="color: green">原文地址</span></a>
         </div>
-        <article v-html="detail.Detail" class="ql-editor" v-highlight></article>
+        <div class="ql-snow">
+          <article v-html="detail.Detail" class="ql-editor" v-highlight></article>
+        </div>
         <div class="comment">
           想对作者说点什么？
           <el-button type="success" @click="dialogVisible = true">我来说一句</el-button>
@@ -74,11 +76,12 @@
   import hljs from 'highlight.js'
   import 'highlight.js/styles/solarized-light.css' //样式文件
   export default {
-    async asyncData({query}) {
+    async asyncData({params }) {
       const {data} = await Axios.axios.get('article/detail', {
         params: {
-          Id: query.id,
+          Id: params.id,
         },
+
       });
       return {detail: data}
     },
@@ -112,9 +115,12 @@
     methods: {
       init(){
         let t=this;
+        document.querySelector('article img').onclick=(e)=>{
+          window.open(e.target.src)
+        }//图片点击
         Axios.axios.get('commit/list', {
           params:{
-            ArticleId:t.$route.query.id,
+            ArticleId:t.$route.params.id,
             Page:t.page,
             Limit: t.limit
           }
@@ -139,7 +145,7 @@
           this.$message.error('没有哦，请输入评论');
           return false;
         }
-        let [t,post,url,id,name,comment]=[this,{},'',this.$route.query.id,this.name.toString().replace(/</g,'〈').replace(/>/g,'〉'),this.comment.toString().replace(/</g,'〈').replace(/>/g,'〉')];
+        let [t,post,url,id,name,comment]=[this,{},'',this.$route.params.id,this.name.toString().replace(/</g,'〈').replace(/>/g,'〉'),this.comment.toString().replace(/</g,'〈').replace(/>/g,'〉')];
         t.loading=true;
         if(t.commentId){
           url='commit/replayCommit';
@@ -179,6 +185,9 @@
   }
 </script>
 <style>
+  article img{
+    cursor: pointer;
+  }
   .review li {
     margin-bottom: 18px;
     padding: 20px 0;

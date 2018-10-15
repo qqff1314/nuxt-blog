@@ -17,7 +17,7 @@
           <div class="img-box">
             <div class="img" :style="{backgroundImage:'url('+(i.Img||'/favicon.ico')+')'}"></div>
           </div>
-          <h1><nuxt-link class="tit" :to="{name:'detail',query:{ id: i.Id }}">{{i.Title}}</nuxt-link></h1>
+          <h1><nuxt-link class="tit" :to="{path:'detail/'+i.Id}">{{i.Title}}</nuxt-link></h1>
         </div>
       </el-col>
     </el-row>
