@@ -189,6 +189,7 @@
 </script>
 <style>
   article img{
+    margin: 5px 0;
     cursor: pointer;
   }
   .review li {
