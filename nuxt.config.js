@@ -7,7 +7,7 @@ module.exports = {
     title: '没下雨',
     meta: [
       { charset: 'utf-8' },
-      { name:'baidu-site-verification',content:'fqgwAHIO6D'},
+      { name:'baidu-site-verification',content:'eSNb8VgHz0'},
       { name: 'viewport', content: 'width=device-width, initial-scale=1'},
       { hid: 'description', name: 'description', content: '没下雨' },
       { hid: 'keywords', name: 'keywords', content: '没下雨,前端,web前端,前端开发,web前端开发,前端博客,前端开发网,前端资源,CSS,CSS3,html,html5,jQuery,jQuery案例' },
