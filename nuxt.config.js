@@ -4,14 +4,14 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '没下雨',
+    title: '云寒的个人空间-爱生活,爱学习',
     meta: [
       { charset: 'utf-8' },
       { name:'baidu-site-verification',content:'9FiF8Zag7I'},
       { name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      { hid: 'description', name: 'description', content: '没下雨' },
-      { hid: 'keywords', name: 'keywords', content: '没下雨,前端,web前端,前端开发,web前端开发,前端博客,前端开发网,前端资源,CSS,CSS3,html,html5,jQuery,jQuery案例' },
-      { hid: 'author', name: 'author', content: '云寒 - www.mxxxy.cn' },
+      { hid: 'description', name: 'description', content: '前端工程师云寒的个人网站,欢迎大家关注云寒的个人空间,一起爱生活,爱学习' },
+      { hid: 'keywords', name: 'keywords', content: '云寒的个人空间,e签宝云寒,前端的个人博客' },
+      { hid: 'author', name: 'author', content: 'e签宝-云寒' },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
       { name: 'format-detection', content: 'telephone=no' },

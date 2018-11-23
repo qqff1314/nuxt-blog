@@ -2,10 +2,10 @@
   <div class="detail">
     <el-row type="flex" justify="center">
       <el-col :xs="24" :sm="22" :md="18" :lg="15" :xl="15">
-        <p class="detail-tit">{{detail.Title}}</p>
+        <h1><p class="detail-tit">{{detail.Title}}</p></h1>
         <div class="detail-head">
           <time :datetime="detail.Time" itemprop="datePublished">发布于 {{detail.Time}}</time>
-          / <a>{{detail.ClassName}}</a> / <span style="color: orange">{{detail.ReadNum}}</span>浏览 <a v-if="detail.Url" :href="detail.Url" >/ <span style="color: green">原文地址</span></a>
+          / <a>{{detail.ClassName}}</a> / <span style="color: orange">{{detail.ReadNum}}</span>浏览 <a v-if="detail.Url" :href="detail.Url" ref="nofollow">/ <span style="color: green">原文地址</span></a>
         </div>
         <div class="ql-snow">
           <article v-html="detail.Detail" class="ql-editor" v-highlight></article>
@@ -76,13 +76,13 @@
   import hljs from 'highlight.js'
   import 'highlight.js/styles/solarized-light.css' //样式文件
   export default {
-    async asyncData({params }) {
+    async asyncData({params,app }) {
       const {data} = await Axios.axios.get('article/detail', {
         params: {
           Id: params.id,
         },
-
       });
+      app.head.title = data.Title
       return {detail: data}
     },
     directives: {
@@ -108,6 +108,12 @@
         total:0,
         list:[]
       }
+    },
+    head: {
+      meta: [
+        { hid: 'keywords', name: 'keywords', content: '' },
+        { hid: 'description', name: 'description', content: '' }
+      ]
     },
     mounted() {
       this.init();

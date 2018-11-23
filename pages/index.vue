@@ -2,8 +2,12 @@
   <div class="index">
     <div class="slider hidden-xs-only" v-if="list.length">
       <div class="slider-img">
-        <img src="~assets/img/logo.png" width="150px" height="82px" alt="没下雨" title="没下雨">
-        <img src="~assets/img/logo-text.png" width="80px"  height="27px" alt="没下雨" title="没下雨">
+        <h1>
+          <a href="http://www.mxxxy.cn">
+            <img src="~assets/img/logo.png" width="150px" height="82px" alt="云寒的个人空间-爱生活,爱学习" title="云寒的个人空间-爱生活,爱学习">
+          </a>
+        </h1>
+        <img src="~assets/img/logo-text.png" width="80px"  height="27px" alt="云寒的个人空间-没下雨" title="云寒的个人空间-没下雨">
       </div>
       <div class="slider-class">
         <ul>
@@ -17,7 +21,7 @@
           <div class="img-box">
             <div class="img" :style="{backgroundImage:'url('+(i.Img||'/favicon.ico')+')'}"></div>
           </div>
-          <h1><nuxt-link class="tit" :to="{path:'detail/'+i.Id}">{{i.Title}}</nuxt-link></h1>
+          <h2><nuxt-link class="tit" :to="{path:'detail/'+i.Id}">{{i.Title}}</nuxt-link></h2>
         </div>
       </el-col>
     </el-row>
