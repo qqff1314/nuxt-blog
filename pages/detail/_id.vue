@@ -110,7 +110,6 @@
       }
     },
     head: {
-      title: '留言-云寒的个人空间',
       meta: [
         { hid: 'keywords', name: 'keywords', content: '' },
         { hid: 'description', name: 'description', content: '' }
