@@ -5,7 +5,7 @@
         <nuxt-link :to="{path:'/'}">首页</nuxt-link>
       </el-menu-item>
       <el-menu-item index="message">
-        <nuxt-link :to="{path:'/message'}">留言</nuxt-link>
+        <nuxt-link :to="{path:'/message'}" ref="nofollow">留言</nuxt-link>
       </el-menu-item>
     </el-menu>
     <div class="pv" v-if="pv!==0">累计访问量「{{pv}}」</div>
