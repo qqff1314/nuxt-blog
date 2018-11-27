@@ -19,7 +19,7 @@
       <el-col :xs="24" :sm="12" :md="8" :lg="8" :xl="6" v-for="(i,index) in articleList" :key="index">
         <div class="item">
           <div class="img-box">
-            <div class="img" :style="{backgroundImage:'url('+(i.Img||'/favicon.ico')+')'}"></div>
+            <img class="img" v-lazy="i.Img" alt="" />
           </div>
           <h2><nuxt-link class="tit" :to="{path:'detail/'+i.Id}">{{i.Title}}</nuxt-link></h2>
         </div>
@@ -202,6 +202,10 @@ export default {
     width: 100%;
     height: 200px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .index .item .tit{
     height: 46px;
@@ -219,13 +223,7 @@ export default {
   }
   .index .item .img{
     transition: .3s all;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     display: block;
-    margin: 0 auto;
   }
   .index .item .tit:hover{
     text-decoration:underline

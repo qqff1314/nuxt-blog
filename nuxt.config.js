@@ -46,7 +46,8 @@ module.exports = {
   },
   plugins: [
     { src: '~plugins/axios'},
-    { src: '~plugins/element-ui'}
+    { src: '~plugins/element-ui'},
+    { src: '~plugins/lazyload'}
   ],
   css: [
     '~assets/css/main.css'
