@@ -224,6 +224,7 @@ export default {
   .index .item .img{
     transition: .3s all;
     display: block;
+    max-width: 100%;
   }
   .index .item .tit:hover{
     text-decoration:underline
