@@ -9,7 +9,7 @@
   padding: 0;
   border: 0;
   list-style: none;
-  font-family:微软雅黑;
+  /* font-family:微软雅黑; */
   box-sizing: border-box;
   transition: all .3s;
 }
@@ -118,6 +118,7 @@ a:visited {
   display: flex;
   flex: auto;
   height: 100%;
+  width: 100%;
 }
 ::-webkit-scrollbar,
 .slider::-webkit-scrollbar{/*滚动条整体样式*/

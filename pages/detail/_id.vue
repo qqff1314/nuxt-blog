@@ -2,14 +2,12 @@
   <div class="detail">
     <el-row type="flex" justify="center">
       <el-col :xs="24" :sm="22" :md="18" :lg="15" :xl="15">
-        <h1><p class="detail-tit">{{detail.Title}}</p></h1>
+        <h1>{{detail.Title}}</h1>
         <div class="detail-head">
           <time :datetime="detail.Time" itemprop="datePublished">发布于 {{detail.Time}}</time>
           / <a>{{detail.ClassName}}</a> / <span style="color: orange">{{detail.ReadNum}}</span>浏览 <a v-if="detail.Url" :href="detail.Url" ref="nofollow">/ <span style="color: green">原文地址</span></a>
         </div>
-        <div class="ql-snow">
-          <article v-html="detail.Detail" class="ql-editor" v-highlight></article>
-        </div>
+        <article class="markdown-body" v-html="detail.Detail"></article>
         <div class="comment">
           想对作者说点什么？
           <el-button type="success" @click="dialogVisible = true">我来说一句</el-button>
@@ -73,8 +71,6 @@
 </template>
 <script>
   import Axios from '~/plugins/axios'
-  import hljs from 'highlight.js'
-  import 'highlight.js/styles/solarized-light.css' //样式文件
   export default {
     async asyncData({params,app }) {
       const {data} = await Axios.axios.get('article/detail', {
@@ -84,17 +80,6 @@
       });
       app.head.title = data.Title
       return {detail: data}
-    },
-    directives: {
-      highlight: {
-        // 指令的定义
-        bind: function (el) {
-          let blocks = el.querySelectorAll('pre');
-          blocks.forEach((block)=>{
-            hljs.highlightBlock(block)
-          });
-        }
-      }
     },
     data() {
       return {
@@ -194,6 +179,8 @@
   }
 </script>
 <style>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css');
+@import url('https://cdn.bootcss.com/github-markdown-css/2.10.0/github-markdown.min.css');
   article img{
     margin: 10px 0;
     cursor: pointer;
@@ -274,7 +261,7 @@
     border-bottom: 1px solid #e0e0e0;
   }
 
-  .detail .detail-tit {
+  .detail h1 {
     line-height: 40px;
     font-weight: 400;
     font-size: 21px;

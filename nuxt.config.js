@@ -49,8 +49,6 @@ module.exports = {
     { src: '~plugins/element-ui'}
   ],
   css: [
-    '~assets/css/main.css',
-    '~assets/css/quill.snow.css',
-    '~assets/css/quill.bubble.css',
+    '~assets/css/main.css'
   ]
 }
