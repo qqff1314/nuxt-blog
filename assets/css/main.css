@@ -120,23 +120,22 @@ a:visited {
   height: 100%;
   width: 100%;
 }
-::-webkit-scrollbar,
-.slider::-webkit-scrollbar{/*滚动条整体样式*/
-  width: 6px;     /*高宽分别对应横竖滚动条的尺寸*/
+/*::-webkit-scrollbar,
+.slider::-webkit-scrollbar{
+  width: 6px;     
   height: 1px;
 }
 ::-webkit-scrollbar-thumb,
-.slider::-webkit-scrollbar-thumb{/*滚动条里面小方块*/
+.slider::-webkit-scrollbar-thumb{
   border-radius: 10px;
   background-color: hsla(220,4%,58%,.3);
   transition: background-color .3s;
 }
-::-webkit-scrollbar-track {/*滚动条里面轨道*/
+::-webkit-scrollbar-track {
   border-radius: 10px;
   background: #f7fafc;
 }
-.slider::-webkit-scrollbar-track {/*滚动条里面轨道*/
+.slider::-webkit-scrollbar-track {
   border-radius: 10px;
   background: #fafafa;
-}
-
+}*/
