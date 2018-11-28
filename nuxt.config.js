@@ -32,7 +32,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    vendor: ['axios','element-ui'],
+    vendor: ['axios','element-ui','vue-lazyload'],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
