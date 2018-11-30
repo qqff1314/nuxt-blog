@@ -3,11 +3,10 @@
     <div class="slider hidden-xs-only" v-if="list.length">
       <div class="slider-img">
         <h1>
-          <a href="http://www.mxxxy.cn">
-            <img src="~assets/img/logo.png" width="150px" height="82px" alt="云寒的个人空间-爱生活,爱学习" title="云寒的个人空间-爱生活,爱学习">
+          <a href="http://www.mxxxy.cn" title="云寒的个人空间-爱生活,爱学习">
+            <img src="~assets/img/logo.png" width="150px" height="82px" alt="云寒的个人空间-爱生活,爱学习" title="云寒的个人空间-爱生活,爱学习" />
           </a>
         </h1>
-        <img src="~assets/img/logo-text.png" width="80px"  height="27px" alt="云寒的个人空间-没下雨" title="云寒的个人空间-没下雨">
       </div>
       <div class="slider-class">
         <ul>
@@ -142,7 +141,7 @@ export default {
   }
   .slider .slider-class{
     position: absolute;
-    top: 220px;
+    top: 150px;
     bottom: 50px;
     left: 0;
     width: 100%;

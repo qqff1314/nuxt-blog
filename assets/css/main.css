@@ -115,27 +115,9 @@ a:visited {
   border-bottom: none!important;
 }
 #__nuxt,#__layout{
-  display: flex;
-  flex: auto;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex: auto;
+  background: #F6FAFB;
 }
-/*::-webkit-scrollbar,
-.slider::-webkit-scrollbar{
-  width: 6px;     
-  height: 1px;
-}
-::-webkit-scrollbar-thumb,
-.slider::-webkit-scrollbar-thumb{
-  border-radius: 10px;
-  background-color: hsla(220,4%,58%,.3);
-  transition: background-color .3s;
-}
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background: #f7fafc;
-}
-.slider::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background: #fafafa;
-}*/
