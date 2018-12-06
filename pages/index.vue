@@ -69,7 +69,7 @@ export default {
     articleClassId: state => state.article.articleClassId,
   }),
   head: {
-    title: '云寒的个人空间-爱生活,爱学习'
+    title: '云寒的个人博客'
   },
   data(){
     return{

@@ -4,14 +4,13 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '云寒的个人空间-爱生活,爱学习',
+    title: '云寒的个人博客',
     meta: [
       { charset: 'utf-8' },
       { name:'baidu-site-verification',content:'9FiF8Zag7I'},
       { name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      { hid: 'description', name: 'description', content: '前端工程师云寒的个人网站,欢迎大家关注云寒的个人空间,一起爱生活,爱学习' },
-      { hid: 'keywords', name: 'keywords', content: '云寒的个人空间,e签宝云寒,前端的个人博客' },
-      { hid: 'author', name: 'author', content: 'e签宝-云寒' },
+      { hid: 'description', name: 'description', content: '这里是前端工程师云寒的个人博客-加紧学习,抓住中心,宁精勿杂,宁专勿多-博客记录了前端的成长之路,生活之路-和别人分享你的知识，那才是永恒之道' },
+      { hid: 'keywords', name: 'keywords', content: '云寒的个人博客,前端博客,前端技术分享' },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
       { name: 'format-detection', content: 'telephone=no' },
