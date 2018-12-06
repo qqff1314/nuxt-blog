@@ -4,7 +4,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '云寒的个人博客',
+    title: '云寒的个人博客-前路漫漫',
     meta: [
       { charset: 'utf-8' },
       { name:'baidu-site-verification',content:'9FiF8Zag7I'},
