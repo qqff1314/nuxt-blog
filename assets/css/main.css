@@ -8,10 +8,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  list-style: none;
-  /* font-family:微软雅黑; */
   box-sizing: border-box;
-  transition: all .3s;
 }
 
 *:focus {
@@ -24,12 +21,11 @@
 em{
   font-style: normal;
 }
-ol, ul, li {
 
-  padding: 0;
-  margin: 0;
-  display: block;
-
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",'Microsoft YaHei','WenQuanYi Micro Hei',Helvetica,Arial,sans-serif;
+  font-size: 19px;
+  font-weight: 400;
 }
 
 u, i {
@@ -38,30 +34,32 @@ u, i {
   font-style: normal;
 }
 
+input, select, textarea {
+  border: none;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0px;
-
 }
 
 fieldset, img {
   border: 0;
-
-}
-
-html {
-  width: 100%;
-  min-height: 100%;
-
 }
 
 body {
   width: 100%;
   position: absolute;
-  font-size: 13px;
   background-color: #fff;
   overflow-x: auto;
   height: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
 a {
@@ -70,54 +68,9 @@ a {
 }
 
 a:link {
-
   text-decoration: none;
 }
 
 a:visited {
-
   text-decoration: none;
-}
-
-.f-cb{
-  zoom: 1;
-}
-
-.f-cb:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden
-}
-.fl{
-  float: left;
-}
-.fr{
-  float: right;
-}
-.w1200{
-  max-width: 1200px;
-  margin: 0 auto;
-}
-@media  screen and (max-width: 768px){
-  .el-container .el-dialog{
-    width: 305px!important;
-  }
-}
-.el-container .el-header{
-  background-color: #fff;
-}
-.el-pagination button,.el-pagination li{
-  background-color: transparent!important;
-}
- .el-menu--horizontal{
-  border-bottom: none!important;
-}
-#__nuxt,#__layout{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex: auto;
-  background: #F6FAFB;
 }

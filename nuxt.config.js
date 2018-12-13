@@ -31,7 +31,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    vendor: ['axios','element-ui','vue-lazyload'],
+    vendor: ['axios'],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -44,9 +44,7 @@ module.exports = {
     }
   },
   plugins: [
-    { src: '~plugins/axios'},
-    { src: '~plugins/element-ui'},
-    { src: '~plugins/lazyload'}
+    { src: '~plugins/axios'}
   ],
   css: [
     '~assets/css/main.css'
