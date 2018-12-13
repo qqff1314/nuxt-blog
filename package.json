@@ -20,11 +20,10 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "element-ui": "^2.4.1",
-    "highlight.js": "^9.12.0",
-    "jquery": "^3.3.1",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
     "nuxt": "^1.0.0",
-    "vue-lazyload": "^1.2.6"
+    "vue-infinite-loading": "^2.4.3"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

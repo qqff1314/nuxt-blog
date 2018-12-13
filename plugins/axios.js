@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import axios from 'axios';
-import { Message } from 'element-ui';
 import qs from 'qs';
 
 const Axios = axios.create({
@@ -27,10 +26,6 @@ Axios.interceptors.request.use(
     return config;
   },
   error => {
-    Message({
-        message: error.message,
-        type: "error",
-    });
     return Promise.reject(error.message);
   },
 );
@@ -39,27 +34,11 @@ Axios.interceptors.request.use(
 Axios.interceptors.response.use(
   res => {
     if (res.data.Status !== 200) {
-        Message({
-            message: res.data.Msg,
-            type: "error",
-        });
         return Promise.reject(res.data.Msg);
     }
     return res.data;
   },
   error => {
-    if (error.message.indexOf('timeout') > -1) {
-        Message({
-            message: '请求超时,请检查网络',
-            type: "error",
-        });
-    }
-    if (error.message.indexOf('Network Error') > -1) {
-        Message({
-            message: '当前无网络,请检查网络',
-            type: "error",
-        });
-    }
     return Promise.reject(error.message);
   },
 );
