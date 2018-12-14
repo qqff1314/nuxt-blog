@@ -5,9 +5,6 @@
       <!-- <ul class="header__ul"> 
         <li class="header__li"><a href="">首页</a></li>
       </ul>  -->
-      <div class="header__search">
-        <span class="search__ico"><svg class="icon__cnt"><use xlink:href="#ei-search-icon"></use></svg></span>
-      </div>
     <!-- </nav>  -->
   </header>
 </template>
@@ -42,14 +39,6 @@
     }
     &__nav{
       width: 66%;
-    }
-    &__search{
-      height: 80px;
-    }
-    .search__ico{
-      display: inline-block;
-      width: 25px;
-      height: 25px;
     }
     // &__ul{
     //   width: 100%;
