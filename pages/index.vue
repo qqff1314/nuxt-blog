@@ -1,6 +1,6 @@
 <template>
   <div id="index">
-    <div class="background" style="background-image: url(https://demo.typecho.me/real/usr/themes/real/real.jpeg)"> 
+    <div class="background" style="background-image: url(http://resource.mxxxy.cn/i-bg.jpg)"> 
       <div class="background__content"> 
         <div class="background__title"> CLOUD COLD </div> 
         <div class="background__description"> 云 寒 的 个 人 博 客 </div> 
@@ -274,7 +274,6 @@ export default {
     }
     .header{
       margin-top: calc(100vh - 80px);
-      height: 80px;
     }
   }
 </style>

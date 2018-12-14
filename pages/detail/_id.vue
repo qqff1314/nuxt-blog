@@ -40,7 +40,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css');
 @import url('https://cdn.bootcss.com/github-markdown-css/2.10.0/github-markdown.min.css');
 .page{
-  padding: 30px;
+  padding: 30px 30px 100px;
   margin: 0 auto;
   &__head{
     border-bottom: 1px solid #ecf0f1;
