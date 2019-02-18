@@ -9,12 +9,16 @@
         <a class="page__class">{{data.ClassName}}</a>
       </div>
       <div class="page__content markdown-body" v-html="data.Detail"></div>
+      <commentList :data="commentList"></commentList>
+      <addComment ref="addComment" @send="commentSend" :loading="loading"></addComment>
     </div>
   </div>
 </template>
 <script>
   import Axios from '~/plugins/axios'
   import Header from '~/components/Header.vue'
+  import addComment from '~/components/addComment.vue'
+  import commentList from '~/components/commentList.vue'
   export default {
     async asyncData({params,app }) {
       const {data} = await Axios.axios.get('article/detail', {
@@ -27,13 +31,46 @@
     },
     components: {
       Header,
+      addComment,
+      commentList
     },
     head: {
       meta: [
         { hid: 'keywords', name: 'keywords', content: '' },
         { hid: 'description', name: 'description', content: '' }
       ]
-    }
+    },
+    data() {
+      return {
+        loading:false,
+        commentList:[]
+      }
+    },
+    mounted(){
+      this.getCommentList()
+    },
+    methods:{
+      getCommentList(){
+        Axios.axios.get('commit/list', {
+          params:{
+            ArticleId:this.$route.params.id,
+            Page:1,
+            Limit: 20
+          }
+        }).then((res)=>{
+          this.commentList=res.data.list;
+        })
+      },
+      commentSend(data){
+        if(this.loading) return
+        this.loading=true
+        data.CommentArticleId=this.$route.params.id
+        Axios.axios.post('commit/addCommit', data).then((res)=>{
+          this.loading=false
+          this.$refs.addComment.clear()
+        }).catch(()=> {this.loading=false})
+      }
+    },
   }
 </script>
 <style scope lang="less">
