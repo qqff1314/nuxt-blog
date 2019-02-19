@@ -61,9 +61,6 @@
       line-height: 40px;
       border-radius: 100%;
       background-color: green;
-      &:hover{
-
-      }
     }
     &-info {
       margin-bottom: 8px;

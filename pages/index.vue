@@ -10,8 +10,8 @@
     <div class="page">
       <article class="page__box" v-for="(item,index) in data.articleList" :key='index'> 
         <div class="page__card">
-          <nuxt-link class="page__image" :to="{path:'detail/'+item.Id}" :style="{backgroundImage:'url(' + item.Img + ')'}"></nuxt-link>
-          <nuxt-link class="page__info" :to="{path:'detail/'+item.Id}">
+          <nuxt-link class="page__image" :to="{path:'page/'+item.Id}" :style="{backgroundImage:'url(' + item.Img + ')'}"></nuxt-link>
+          <nuxt-link class="page__info" :to="{path:'page/'+item.Id}">
             <time class="page__time" :datetime="item.Time"> {{item.Time.split(' ')[0]}} 「{{item.ClassName}}」</time>
             <h2> {{item.Title}} </h2> 
           </nuxt-link>
