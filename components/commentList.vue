@@ -22,14 +22,7 @@
 </template>
 <script>
   export default {
-    data() {
-      return {
-       
-      };
-    },
     props:['data'],
-    mounted(){
-    },
     methods: {
       replay(data){
         this.$store.commit('comment/setReplayUser', data);

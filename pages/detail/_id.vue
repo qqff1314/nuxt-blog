@@ -118,23 +118,23 @@
   }
 }
 @media  screen and (min-width: 1200px){
-    .page {
-      width: 60%;
+  .page {
+    width: 60%;
+  }
+}
+@media  screen and (min-width: 768px) and (max-width: 1200px) {
+  .page {
+    width: 80%;
+  }
+}
+@media  screen and (max-width: 768px){
+  .page {
+    padding: 30px 20px;
+    width: 100%;
+    &__title{
+      font-size: 26px;
+      padding-bottom: 10px;
     }
   }
-  @media  screen and (min-width: 768px) and (max-width: 1200px) {
-    .page {
-      width: 80%;
-    }
-  }
-  @media  screen and (max-width: 768px){
-    .page {
-      padding: 30px 20px;
-      width: 100%;
-      &__title{
-        font-size: 26px;
-        padding-bottom: 10px;
-      }
-    }
-  }
+}
 </style>

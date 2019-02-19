@@ -20,8 +20,6 @@
     computed: mapState({
       replayUser: state => state.comment.replayUser
     }),
-    mounted(){
-    },
     methods: {
       clear(){
         this.userName=''

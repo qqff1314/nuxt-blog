@@ -8,24 +8,6 @@
     <!-- </nav>  -->
   </header>
 </template>
-<script>
-  export default {
-    data() {
-      return {
-      };
-    },
-    watch:{
-      
-    },
-    mounted(){
-      this.init()
-    },
-    methods: {
-      init(){
-      }
-    }
-  }
-</script>
 <style scoped lang="less">
   .header{
     padding: 15px 30px;
