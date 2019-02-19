@@ -10,7 +10,7 @@
       </div>
       <div class="page__content markdown-body" v-html="data.Detail"></div>
       <addComment ref="addComment" @send="commentSend" :loading="loading"></addComment>
-      <commentList :data="commentList"></commentList>
+      <commentList v-if="commentList.length" :data="commentList"></commentList>
     </div>
   </div>
 </template>
