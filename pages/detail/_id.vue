@@ -9,8 +9,8 @@
         <a class="page__class">{{data.ClassName}}</a>
       </div>
       <div class="page__content markdown-body" v-html="data.Detail"></div>
-      <commentList :data="commentList"></commentList>
       <addComment ref="addComment" @send="commentSend" :loading="loading"></addComment>
+      <commentList :data="commentList"></commentList>
     </div>
   </div>
 </template>
@@ -61,13 +61,27 @@
           this.commentList=res.data.list;
         })
       },
-      commentSend(data){
+      commentSend(config){
         if(this.loading) return
         this.loading=true
-        data.CommentArticleId=this.$route.params.id
-        Axios.axios.post('commit/addCommit', data).then((res)=>{
-          this.loading=false
+        let url={
+          'add':'commit/addCommit',
+          'replay':'commit/replayCommit',
+        }
+        Axios.axios.post(url[config.key], config.params).then((res)=>{
           this.$refs.addComment.clear()
+          if(config.key=='add'){
+            this.commentList.unshift(res.data)
+            location.replace('#review')
+          }else{
+            for(let i=0;i< this.commentList.length;i++){
+              if(this.commentList[i].Id===config.params.CommentId) {
+                this.commentList[i].Replay.unshift(res.data)
+                location.replace('#review'+(i+1))
+              }
+            }
+          }
+          this.loading=false
         }).catch(()=> {this.loading=false})
       }
     },

@@ -1,44 +1,80 @@
 <template>
-  <div class="comment">
-    <input type="text" placeholder="昵称" maxlength="6" v-model.trim="userName" class="comment-name"/>
-    <textarea type="text" placeholder="内容" maxlength="200" v-model.trim="content" class="comment-content"/>
-    <button class="comment-btn" @click="send">提 交 评 论</button>
-    <span class="comment-mark">评论</span>
+  <div id="comment">
+    <div class="comment">
+      <input type="text" placeholder="昵称" maxlength="6" v-model.trim="userName" class="comment-name"/>
+      <textarea type="text" placeholder="内容" maxlength="200" v-model.trim="content" class="comment-content"/>
+      <button class="comment-btn" @click="send">提 交 评 论</button>
+      <span class="comment-mark">{{replayUser.Id?`回复 ( ${replayUser.CommentUserName} )`:'评论'}}</span>
+    </div>
   </div>
 </template>
 <script>
+  import { mapState } from 'vuex'
   export default {
     data() {
       return {
         content:'',
-        userName:''
+        userName:'',
       };
     },
+    computed: mapState({
+      replayUser: state => state.comment.replayUser
+    }),
     mounted(){
     },
     methods: {
       clear(){
         this.userName=''
         this.content=''
+        this.$store.commit('comment/setReplayUser', {});
       },
       send(){
         if(!this.userName||!this.content) return
-        let obj={
-          CommentUserName:this.userName,
-          Comment:this.content,
+        let config={}
+        if(this.replayUser.Id){
+          config={
+            key:"replay",
+            params:{
+              ReplayContent:this.escape(this.content),
+              CommentId:this.replayUser.Id,
+              ReplayUserName:this.escape(this.userName),
+              CommentArticleId:this.replayUser.CommentArticleId
+            }
+          }
+        }else{
+          config={
+            key:"add",
+            params:{
+              CommentArticleId:this.$route.params.id,
+              CommentUserName:this.escape(this.userName),
+              Comment:this.escape(this.content)
+            }
+          }
         }
-        this.$emit('send',obj)
+        this.$emit('send',config)
+      },
+      escape(str) {
+        str = str.replace(/&/g, '&amp;')
+        str = str.replace(/</g, '&lt;')
+        str = str.replace(/>/g, '&gt;')
+        str = str.replace(/"/g, '&quto;')
+        str = str.replace(/'/g, '&#39;')
+        str = str.replace(/`/g, '&#96;')
+        str = str.replace(/\//g, '&#x2F;')
+        return str
       }
     }
   }
 </script>
 <style scoped lang="less">
+  #comment{
+    padding: 50px 0;
+  }
   .comment{
-    margin: 50px 0;
     border: 1px solid #dedede;
     padding: 40px 30px 30px;
     width: 50%;
-    font-size: 30px;
+    font-size: 20px;
     position: relative;
     &-mark{
       position: absolute;

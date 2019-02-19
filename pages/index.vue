@@ -18,7 +18,7 @@
         </div>
       </article>
     </div>
-    <infinite-loading v-if="areadyLoading" spinner="waveDots" @infinite="onInfinite" :distance="100">
+    <infinite-loading spinner="waveDots" @infinite="onInfinite" :distance="100">
       <div slot="no-more"></div>
       <div slot="no-results"></div>
     </infinite-loading>
@@ -65,15 +65,9 @@ export default {
       store.commit('article/setArticleList', data.list);
     }
   },
-  data(){
-    return {
-        areadyLoading:false
-      };
-  },
   computed: mapState({
     data: state => state.article
   }),
-  created(){this.areadyLoading=true},
   methods:{
     onInfinite($state){
       if(this.data.articleTotal/this.data.articleLimit>this.data.articlePage){
