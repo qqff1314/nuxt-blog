@@ -1,6 +1,6 @@
 <template>
   <div id="index">
-    <div class="background" style="background-image: url(http://resource.mxxxy.cn/i-bg.jpg)"> 
+    <div class="background" style="background-image: url(http://resource.mxxxy.cn/file-bg20190220.jpg)"> 
       <div class="background__content"> 
         <div class="background__title"> CLOUD COLD </div> 
         <div class="background__description"> 云 寒 的 个 人 博 客 </div> 
