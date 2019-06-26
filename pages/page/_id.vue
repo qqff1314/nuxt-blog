@@ -26,7 +26,7 @@
           Id: params.id,
         },
       });
-      app.head.title = data.Title
+      app.head.title = data.Title+' - 云寒的个人博客'
       return {data}
     },
     components: {
